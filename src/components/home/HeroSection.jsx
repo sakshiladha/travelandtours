@@ -1,14 +1,13 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { pexels } from "../../data/destinations";
 
 export default function HeroSection() {
   return (
     <section id="home" className="bg-ivory px-4 py-5 sm:px-5 lg:py-6">
       <div className="mx-auto grid max-w-[1600px] gap-5 lg:grid-cols-[52fr_48fr]">
-        <article className="hero-card group relative h-[560px] overflow-hidden rounded-[28px] bg-navy opacity-0 shadow-navy md:h-[640px] lg:h-[720px]">
+        <article className="hero-card group relative h-[560px] overflow-hidden rounded-[28px] bg-navy opacity-0 shadow-navy md:h-[600px] lg:h-[650px]">
           <Image
-            src={pexels(3881104, 1500, 1100)}
+            src="/images/Hero/heroleft.webp"
             alt="Luxury Indian architecture hero placeholder"
             fill
             priority
@@ -23,30 +22,34 @@ export default function HeroSection() {
               <span className="px-3 text-base font-semibold text-white">Travel Agency</span>
             </div>
 
-            <h1 className="max-w-[780px] font-body text-[42px] font-medium leading-[1.12] tracking-[-0.02em] text-white sm:text-[56px] lg:text-[64px] xl:text-[72px]">
-              Explore <span className="font-medium italic text-[#F0C84B]">Incredible India</span> with the Best India Tour Packages
+            <h1 className="max-w-[780px] font-body text-[42px] font-medium leading-[1.12] tracking-[-0.02em] text-white sm:text-[46px] lg:text-[52px] xl:text-[52px]">
+              Explore <span className="font-medium italic text-[#FFE101]">Incredible India</span> with the Best India Tour Packages
             </h1>
 
-            <p className="mt-7 max-w-[710px] text-base font-medium leading-8 text-white/88 sm:text-lg lg:text-[19px]">
+            <p className="mt-7 max-w-[710px] text-base font-medium leading-8 text-white/88 ">
               Discover the beauty, culture, heritage, spirituality, and adventure of India through carefully curated tours and personalized travel experiences. Explore Rajasthan, Kashmir, Kerala, Ladakh, Varanasi, Goa, and more with expert planning and private transportation.
             </p>
 
             <div className="mt-9">
-              <a href="#packages" className="inline-flex items-center gap-8 rounded-full bg-white px-8 py-5 text-lg font-medium text-saffron shadow-premium transition duration-300 hover:-translate-y-1 hover:bg-saffron hover:text-white sm:text-xl">
+              <a href="#packages" className="inline-flex items-center gap-4 rounded-full bg-white px-5 py-3 text-md font-medium text-saffron shadow-premium transition duration-300 hover:-translate-y-1 hover:bg-saffron hover:text-white sm:text-md">
                 Explore Tours <ArrowRight size={22} />
               </a>
             </div>
           </div>
         </article>
 
-        <article className="hero-card group relative h-[560px] overflow-hidden rounded-[28px] bg-navy opacity-0 shadow-navy md:h-[640px] lg:h-[720px]">
-          <Image
-            src={pexels(3881092, 1450, 1100)}
-            alt="Premium Rajasthan desert camel safari hero placeholder"
-            fill
-            sizes="(min-width: 1024px) 48vw, 100vw"
-            className="scale-100 object-cover transition-transform duration-[8000ms] ease-out group-hover:scale-110"
-          />
+        <article className="hero-card group relative h-[560px] overflow-hidden rounded-[28px] bg-navy opacity-0 shadow-navy md:h-[600px] lg:h-[650px]">
+          <video
+            className="h-full w-full scale-100 object-cover transition-transform duration-[8000ms] ease-out group-hover:scale-110"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label="Premium Rajasthan desert camel safari hero video"
+          >
+            <source src="/images/Hero/heroright.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-t from-navy/82 via-navy/28 to-transparent" />
           <div className="absolute bottom-9 left-8 right-8 z-10 flex flex-col gap-7 font-body text-white sm:left-12 sm:right-12 md:flex-row md:items-end md:justify-between">
             <div className="max-w-[470px]">
@@ -55,7 +58,7 @@ export default function HeroSection() {
                 Explore unforgettable journeys across India&apos;s most beautiful destinations.
               </p>
             </div>
-            <a href="#about" className="inline-flex shrink-0 items-center justify-center gap-5 rounded-full bg-white px-8 py-5 text-lg font-medium text-ink shadow-premium transition duration-300 hover:-translate-y-1 hover:bg-saffron hover:text-white sm:text-xl">
+            <a href="#about" className="inline-flex shrink-0 items-center justify-center gap-5 rounded-full bg-white px-5 py-3 text-md font-medium text-ink shadow-premium transition duration-300 hover:-translate-y-1 hover:bg-saffron hover:text-white sm:text-md">
               About Us <ArrowRight size={24} />
             </a>
           </div>

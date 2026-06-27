@@ -1,30 +1,42 @@
 import Image from "next/image";
-import { BadgeCheck } from "lucide-react";
-import { pexels } from "../../data/destinations";
+import { Quote } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="bg-ivory py-20">
-      <div className="container-pad grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="soft-card group relative overflow-hidden p-3 reveal">
-          <div className="relative h-[390px] overflow-hidden rounded-[16px]">
-            <Image src={pexels(3183197)} alt="Travellers planning India tour" fill sizes="(min-width: 1024px) 45vw, 100vw" className="image-zoom object-cover" />
-          </div>
-          <div className="absolute bottom-8 left-8 rounded-2xl bg-white px-5 py-4 shadow-premium">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-saffron">Trip concierge</p>
-            <p className="font-display text-lg font-medium text-navy">Your Private Chauffeur & Consultant</p>
+    <section id="about" className="bg-[#F7F7F6] py-[110px]">
+      <div className="container-pad grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="relative h-[430px] overflow-hidden rounded-[22px] shadow-[0_20px_50px_rgba(7,23,47,0.12)] sm:h-[520px] lg:h-[560px]">
+          <Image
+            src="https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&w=1400&h=1000&fit=crop"
+            alt="Travellers exploring a city with a map"
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
+          />
+
+          <div className="absolute bottom-6 left-6 right-6 flex min-h-[105px] items-center gap-6 rounded-[14px] bg-white px-6 py-5 shadow-[0_18px_45px_rgba(7,23,47,0.18)] sm:bottom-9 sm:left-9 sm:right-9 sm:px-9">
+            <Quote className="shrink-0 text-[#1677C8]" size={34} strokeWidth={2.4} />
+            <p className="text-lg font-bold leading-snug text-navy sm:text-[22px]">
+              Your trusted partner for unforgettable India travel experiences
+            </p>
           </div>
         </div>
-        <div>
-          <p className="eyebrow">About India Tours & Travels</p>
-          <h2 className="mt-2 font-display text-3xl font-medium leading-tight text-navy md:text-5xl">Your Trusted India Travel Partner</h2>
-          <p className="mt-4 leading-7 text-ink/70">We create thoughtfully planned India tour packages with private car rental, local drivers, safe routing and flexible day-wise itineraries. From Kashmir valleys to Kerala backwaters, our team helps families, couples, groups and international travellers experience India with comfort and confidence.</p>
-          <div className="mt-8 grid gap-4">
-            {["Custom trips for every traveller", "Private cars with experienced drivers", "Local support from planning to return"].map((point) => (
-              <div key={point} className="flex items-center gap-3 rounded-2xl bg-white p-4 shadow-sm">
-                <BadgeCheck className="text-forest" /> <span className="font-semibold text-navy">{point}</span>
-              </div>
-            ))}
+
+        <div className="lg:pl-2">
+          <h2 className="max-w-[760px] font-display text-[36px] font-medium leading-[1.1] tracking-[-1px] text-[#073B66] sm:text-[44px] lg:text-[52px]">
+            Your Trusted India Travel Partner
+          </h2>
+
+          <div className="mt-8 max-w-[720px] space-y-7 font-body text-base font-normal leading-[1.8] text-[#30343B] sm:text-[19px]">
+            <p>
+              India Tours & Travels is a leading travel company offering customized India tour packages, pilgrimage tours, festival tours, family holidays, honeymoon packages, group tours, and car rental services across India.
+            </p>
+            <p>
+              Our mission is to help travelers discover the true essence of India through carefully planned journeys covering famous tourist destinations, historical monuments, spiritual sites, cultural festivals, wildlife experiences, and hidden gems.
+            </p>
+            <p>
+              Whether you want to explore the Himalayas, visit sacred temples, experience colorful festivals, or enjoy a relaxing beach vacation, we create unforgettable travel experiences tailored to your preferences.
+            </p>
           </div>
         </div>
       </div>
